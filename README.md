@@ -1,21 +1,30 @@
 # BACK END [Foodie] => SUBJECT TO CHANGE
+
 #### Back End Architect => Jason Aviles
-*****
+
+---
+
 ## BASE URL:
+
 #### https://buildweek-foodie1.herokuapp.com (she's alive!)
-*****
+
+---
 
 ### admin sign up:
+
 #### POST /auth/register
 
 Client sends:
+
 ```
 {
   "username": "new user name", //REQUIRED
   "password": "pass",          //REQUIRED
 }
 ```
+
 Server returns:
+
 ```
 {
     "id": "5",
@@ -23,18 +32,21 @@ Server returns:
 ```
 
 ### admin log in (provides authentication token)
+
 #### POST /auth/login
 
-
 Client sends:
+
 ```
 {
   "username": "new user name", //REQUIRED
   "password": "pass"           //REQUIRED
-  
+
 }
 ```
+
 Server returns:
+
 ```
 {
     "messsage": "Welcome username",
@@ -43,18 +55,20 @@ Server returns:
 }
 ```
 
-*****
-#### auth routes for senior devs needs token#####################33#
+---
+
+#### auth routes for senior devs needs token#####################33
+
 ######################################################
 
+### Displays list of restaurant
 
-### Displays list of restaurant ####
-
-
-#### first react senior ###
+#### first react senior
 
 #### GET /api/
+
 Server returns:
+
 ```
 [
       {
@@ -91,10 +105,10 @@ Server returns:
     ]
 ```
 
-
 #### POST /api/
 
 User can post
+
 ```
 {
    "restaurant_name":"name",
@@ -113,14 +127,13 @@ delete by id
 
 User can edit
 ```
+
 {
-   "restaurant_name":"name",
+"restaurant_name":"name",
 "restaurant_type":"type",
 "user_id":req.params.id,
 "menu_id":req.params.id
 }
-
-
 
 ####first react senior done ###
 
@@ -130,16 +143,14 @@ User can edit
 ####################################
 ####################################
 
-
-
 ### Displays list of menu items
-
 
 #### GET /api/menu
 
-#### second react senior ####
+#### second react senior
 
-Server returns: 
+Server returns:
+
 ```
 [
       {
@@ -188,20 +199,22 @@ Server returns:
       }
     ]
 ```
-*****
 
-
+---
 
 #### POST /api/menu
 
 User can post
+
 ```
 {
-   "menu_item_name":"name",
+
+ "menu_item_name":"name",
 "restaurant_type":"type",
 "photo_of_order":photo url,
 "food_rating": a number,
-review_id:req.params.id
+"review_id":req.params.id
+
 }
 
 #### DELETE /api/menu/:id
@@ -214,40 +227,31 @@ delete by id
 
 User can edit
 ```
+
 {
-      "menu_item_name":"name",
+"menu_item_name":"name",
 "restaurant_type":"type",
 "photo_of_order":photo url,
 "food_rating": a number,
 review_id:req.params.id
 }
 
-
-
-
-
-
-#### second react done ####
-
+#### second react done
 
 ####################################
 ####################################
 
 ####################################
 ####################################
-
-
-
-
 
 ### Displays list of menu items
 
-
 #### GET /api/menu
 
-#### third react senior ####
+#### third react senior
 
-Server returns: 
+Server returns:
+
 ```
 [
       {
@@ -289,13 +293,13 @@ Server returns:
       }
     ]
 ```
-*****
 
-
+---
 
 #### POST /api/menu
 
 User can post
+
 ```
 {
    "comments":"put a comment",
@@ -315,31 +319,19 @@ delete by id
 
 User can edit
 ```
+
 {
-   "comments":"put a comment",
+"comments":"put a comment",
 "price":"a decimal",
 "wait_time":a string,
 "date_of_visit": "a string",
 menu_id:req.params.id
 }
 
-
-
-
-
-
-#### third react done ####
-
-
-
-
-
+#### third react done
 
 ######
 
-
-
-
 ####################################
 ####################################
 
@@ -351,16 +343,15 @@ menu_id:req.params.id
 
 ####################################
 ####################################
-
 
 ###########react junior devs #################
 
-
 #### GET /detail
 
-#### first react junior dev ####
+#### first react junior dev
 
-Server returns: 
+Server returns:
+
 ```
 [
 {
@@ -395,17 +386,14 @@ Server returns:
 }
 ]
 ```
-*****
 
-
-
-
+---
 
 #### GET /detail/:id
 
-###  more detail on the item name
-Server returns:
+### more detail on the item name
 
+Server returns:
 
 [
 {
@@ -420,17 +408,14 @@ Server returns:
 }
 ]
 
-
-
-#### first react junior dev done####
-
-
+#### first react junior dev done
 
 #### GET /public
 
-#### second react junior dev ####
+#### second react junior dev
 
-Server returns: 
+Server returns:
+
 ```
 [
 {
@@ -465,17 +450,14 @@ Server returns:
 }
 ]
 ```
-*****
 
-
-
-
+---
 
 #### GET /public/:id
 
-###  more detail on the item name
-Server returns:
+### more detail on the item name
 
+Server returns:
 
 [
 {
@@ -488,15 +470,11 @@ Server returns:
 }
 ]
 
-
-
-
-
 #### GET /public/detail/:id
 
-###  more detail on the item name
-Server returns:
+### more detail on the item name
 
+Server returns:
 
 [
 {
@@ -511,10 +489,4 @@ Server returns:
 }
 ]
 
-
-
-
-
-
-
-#### first react junior dev done####
+#### second react junior dev done
