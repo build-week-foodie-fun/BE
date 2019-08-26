@@ -13,7 +13,7 @@ exports.up = function(knex) {
       tbl.increments();
       tbl
         .string("restaurant_name", 140)
-        .unique()
+        
         .notNullable();
       tbl.string("restaurant_type", 140).notNullable();
       tbl.timestamp("created_at").defaultTo(knex.fn.now());

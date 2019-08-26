@@ -29,25 +29,25 @@ router.post("/", (req, res) => {
 });
 
 router.delete("/:id", (req, res) => {
-  const { id } = req.params.id;
-  if (!id) {
-    res.status(401).res.json({ message: "no id" });
-  } else {
-    db.remove_review(id).then(data => res.status(201).res.json(data));
-  }
+  const { id } = req.params;
+
+  db.remove_review(id).then(data => res.status(201).json(data));
 });
 
 
 router.put("/:id",(req,res)=>{
   const { id } = req.params;
   const body = req.body;
-  db.update_review(id,body).then(update =>{
-    if (id) {
-      res.status(200).json(update);
-    }else(res.status(400).json({errorMessage: "Please provide name and bio for the user."}))
-  }) .catch(err => {
-    res.status(500).json({ error: "The user information could not be modified." });
-  })
+ 
+
+  db.update_review(id, body)
+    .then(user => res.status(200).json(user))
+    .catch(err =>
+      res
+        .status(500)
+        .json({ message: "you fucked up the backend j check it my guy." })
+    );
+
 
 })
 
