@@ -23,6 +23,7 @@ router.post("/register", (req, res) => {
 
 router.post("/login", (req, res) => {
   let { password, username } = req.body;
+  let {id} = req.params
   if (password && username) {
     db.findBy({ username })
       .first() //takes first item out of object
@@ -30,7 +31,7 @@ router.post("/login", (req, res) => {
         if (user && bcrypt.compareSync(password, user.password)) {
           const token = generateToken(user);
 
-          res.status(200).json({ message: `${user.username}`, token });
+          res.status(200).json({ message: `${user.username}`, token ,id});
         } else {
           res.status(401).json({ message: "invalid login info" });
         }
