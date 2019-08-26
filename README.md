@@ -16,20 +16,20 @@
 
 Client sends:
 
-```
+
 {
   "username": "new user name", //REQUIRED
   "password": "pass",          //REQUIRED
 }
-```
+
 
 Server returns:
 
-```
+
 {
     "id": "5",
 }
-```
+
 
 ### admin log in (provides authentication token)
 
@@ -37,23 +37,23 @@ Server returns:
 
 Client sends:
 
-```
+
 {
   "username": "new user name", //REQUIRED
   "password": "pass"           //REQUIRED
 
 }
-```
+
 
 Server returns:
 
-```
+
 {
     "messsage": "Welcome username",
     "id": "5",
     "token": "big ol' hashed token"
 }
-```
+
 
 ---
 
@@ -69,7 +69,7 @@ Server returns:
 
 Server returns:
 
-```
+
 [
       {
         restaurant_name: "Pizza Hut",
@@ -103,13 +103,13 @@ Server returns:
         menu_id: 6
       }
     ]
-```
 
-#### POST /api/
+
+#### POST /api/ ##
 
 User can post
 
-```
+
 {
    "restaurant_name":"name",
 "restaurant_type":"type",
@@ -126,7 +126,7 @@ delete by id
 ### PUT  /api/:id
 
 User can edit
-```
+
 
 {
 "restaurant_name":"name",
@@ -151,7 +151,7 @@ User can edit
 
 Server returns:
 
-```
+
 [
       {
         item_name: "pizza",
@@ -198,7 +198,7 @@ Server returns:
         food_rating: 4.0
       }
     ]
-```
+
 
 ---
 
@@ -206,7 +206,7 @@ Server returns:
 
 User can post
 
-```
+
 {
 
  "menu_item_name":"name",
@@ -226,7 +226,7 @@ delete by id
 ### PUT  /api/menu:id
 
 User can edit
-```
+
 
 {
 "menu_item_name":"name",
@@ -252,7 +252,7 @@ review_id:req.params.id
 
 Server returns:
 
-```
+
 [
       {
         comments: "this is a great place to eat",
@@ -292,7 +292,7 @@ Server returns:
         menu_id: 6
       }
     ]
-```
+
 
 ---
 
@@ -300,7 +300,7 @@ Server returns:
 
 User can post
 
-```
+
 {
    "comments":"put a comment",
 "price":"a decimal",
@@ -318,7 +318,7 @@ delete by id
 ### PUT  /api/menu:id ######
 
 User can edit
-```
+
 
 {
 "comments":"put a comment",
@@ -352,7 +352,7 @@ menu_id:req.params.id
 
 Server returns:
 
-```
+
 [
 {
 "id": 1,
@@ -385,7 +385,7 @@ Server returns:
 "photo_of_order": "http://www.pngmart.com/files/8/Grilled-Food-PNG-Clipart-Background.png"
 }
 ]
-```
+
 
 ---
 
@@ -416,7 +416,7 @@ Server returns:
 
 Server returns:
 
-```
+
 [
 {
 "id": 1,
@@ -449,7 +449,7 @@ Server returns:
 "restaurant_type": "American cuisine"
 }
 ]
-```
+
 
 ---
 
