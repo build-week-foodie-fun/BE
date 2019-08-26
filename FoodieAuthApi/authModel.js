@@ -33,29 +33,29 @@ function findall(id) {
 }
 
 function find_review() {
-  return db("menu_item_review");
+  return db("restaurant_review");
 }
 
 function findById_review(id) {
-  return db("menu_item_review")
+  return db("restaurant_review")
     .where({ id: Number(id) })
     .first();
 }
 
 function insert_review(user) {
-  return db("menu_item_review")
+  return db("restaurant_review")
     .insert(user)
     .then(ids => ({ id: ids[0] }));
 }
 
 function update_review(id, user) {
-  return db("menu_item_review")
+  return db("restaurant_review")
     .where("id", Number(id))
     .update(user);
 }
 
 function remove_review(id) {
-  return db("menu_item_review")
+  return db("restaurant_review")
     .where("id", Number(id))
     .del();
 }
@@ -63,7 +63,7 @@ function remove_review(id) {
 //menu item
 
 function find_menu() {
-  return db("menu_item");
+  return db("users");
 }
 
 function findById_menu(id) {
