@@ -13,7 +13,7 @@ server.use(helmet());
 server.use(cors());
 server.use(express.json());
 
-server.use("/detail", detailPublic);
+// server.use("/detail", detailPublic);
  server.use("/public", publicApi);
 server.use("/auth", authUser);
 server.use("/auth/api",authMiddleWare, authApi);
