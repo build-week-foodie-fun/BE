@@ -13,6 +13,10 @@
   },
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": "8.16.0",
+    "npm": "6.11.2"
+  },
   "dependencies": {
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
